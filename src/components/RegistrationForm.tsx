@@ -2,7 +2,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Card } from "@/components/ui/card";
 import { DollarSign } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
@@ -13,15 +12,14 @@ const RegistrationForm = () => {
     lastName: "",
     email: "",
     phone: "",
-    country: ""
   });
   const { toast } = useToast();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast({
-      title: "Registration Submitted!",
-      description: "We'll contact you soon with your trading account details.",
+      title: "Inscription Soumise !",
+      description: "Nous vous contacterons bientôt avec les détails de votre compte de trading.",
     });
   };
 
@@ -37,17 +35,17 @@ const RegistrationForm = () => {
             <DollarSign className="w-6 h-6 text-cyan-400" />
           </div>
           <h3 className="text-white text-lg font-semibold mb-2">
-            Start Earning Money Immediately
+            Commencez à Gagner de l'Argent Immédiatement
           </h3>
           <p className="text-slate-300 text-sm">
-            Get up to 50% registration bonus
+            Obtenez jusqu'à 50% de bonus d'inscription
           </p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <Input
             type="text"
-            placeholder="First Name"
+            placeholder="Prénom"
             value={formData.firstName}
             onChange={(e) => handleInputChange("firstName", e.target.value)}
             className="bg-white border-0 text-slate-900 placeholder:text-slate-500"
@@ -55,7 +53,7 @@ const RegistrationForm = () => {
           />
           <Input
             type="text"
-            placeholder="Last Name"
+            placeholder="Nom de famille"
             value={formData.lastName}
             onChange={(e) => handleInputChange("lastName", e.target.value)}
             className="bg-white border-0 text-slate-900 placeholder:text-slate-500"
@@ -63,27 +61,19 @@ const RegistrationForm = () => {
           />
           <Input
             type="email"
-            placeholder="Email Address"
+            placeholder="Adresse courriel"
             value={formData.email}
             onChange={(e) => handleInputChange("email", e.target.value)}
             className="bg-white border-0 text-slate-900 placeholder:text-slate-500"
             required
           />
           <div className="flex">
-            <Select onValueChange={(value) => handleInputChange("country", value)}>
-              <SelectTrigger className="w-20 bg-white border-0 rounded-r-none">
-                <SelectValue placeholder="🇺🇸" />
-              </SelectTrigger>
-              <SelectContent className="bg-white">
-                <SelectItem value="us">🇺🇸 +1</SelectItem>
-                <SelectItem value="uk">🇬🇧 +44</SelectItem>
-                <SelectItem value="ca">🇨🇦 +1</SelectItem>
-                <SelectItem value="au">🇦🇺 +61</SelectItem>
-              </SelectContent>
-            </Select>
+            <div className="w-20 bg-white border-0 rounded-r-none flex items-center justify-center text-slate-900 font-semibold">
+              🇨🇦 +1
+            </div>
             <Input
               type="tel"
-              placeholder="Phone Number"
+              placeholder="Numéro de téléphone"
               value={formData.phone}
               onChange={(e) => handleInputChange("phone", e.target.value)}
               className="bg-white border-0 text-slate-900 placeholder:text-slate-500 rounded-l-none flex-1"
@@ -94,7 +84,7 @@ const RegistrationForm = () => {
             type="submit" 
             className="w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-semibold py-3 text-lg transition-all duration-300 transform hover:scale-105"
           >
-            START NOW
+            COMMENCER MAINTENANT
           </Button>
         </form>
       </Card>

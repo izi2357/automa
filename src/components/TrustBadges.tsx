@@ -2,7 +2,7 @@
 import { Shield } from "lucide-react";
 
 const TrustBadges = () => {
-  const badges = ["Symantec", "McAfee SECURE", "VeriSign", "SSL Trust", "GeoTrust", "SECURE"];
+  const badges = ["Symantec", "McAfee SÉCURISÉ", "VeriSign", "SSL Trust", "GeoTrust", "SÉCURISÉ"];
 
   return (
     <div className="mb-16">

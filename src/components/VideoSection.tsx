@@ -11,12 +11,9 @@ const VideoSection = () => {
           playsInline
         >
           <source src="https://direct-website.azureedge.net/assets/img/svelte-home/hero/buttons/bg-video.webm" type="video/webm" />
-          Your browser does not support the video tag.
+          Votre navigateur ne supporte pas la balise vidéo.
         </video>
         <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-        <div className="absolute bottom-4 left-4 text-white">
-          <p className="text-lg font-semibold">Watch Our Trading Bot In Action</p>
-        </div>
       </div>
     </div>
   );
