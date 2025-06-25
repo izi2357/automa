@@ -5,20 +5,20 @@ const Features = () => {
   const features = [
     {
       icon: TrendingUp,
-      title: "AI-Powered Trading",
-      description: "Advanced algorithms analyze market trends 24/7",
+      title: "Trading Propulsé par l'IA",
+      description: "Des algorithmes avancés analysent les tendances du marché 24h/24 et 7j/7",
       color: "cyan"
     },
     {
       icon: DollarSign,
-      title: "High Returns",
-      description: "Earn up to $2200 per day with our proven system",
+      title: "Hauts Rendements",
+      description: "Gagnez jusqu'à 2200 $ par jour avec notre système éprouvé",
       color: "green"
     },
     {
       icon: Shield,
-      title: "Secure & Safe",
-      description: "Bank-level security protects your investments",
+      title: "Sécurisé & Sûr",
+      description: "Une sécurité de niveau bancaire protège vos investissements",
       color: "blue"
     }
   ];

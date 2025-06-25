@@ -1,0 +1,19 @@
+{
+  "mcpServers": {
+    "github.com/supabase-community/supabase-mcp": {
+      "command": "cmd",
+      "args": [
+        "/c",
+        "npx",
+        "-y",
+        "@supabase/mcp-server-supabase@latest",
+        "--read-only",
+        "--project-ref=afqabhxtwmupapkhzryl",
+        "--access-token=sbp_ba4d4d3387d9328711078a756b9f4ebd0c603366"
+      ],
+      "env": {
+        "SUPABASE_ACCESS_TOKEN": "sbp_ba4d4d3387d9328711078a756b9f4ebd0c603366"
+      }
+    }
+  }
+}

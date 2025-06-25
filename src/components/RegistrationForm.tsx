@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
 import { DollarSign } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 const RegistrationForm = () => {
   const [formData, setFormData] = useState({
@@ -15,12 +16,36 @@ const RegistrationForm = () => {
   });
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Inscription Soumise !",
-      description: "Nous vous contacterons bientôt avec les détails de votre compte de trading.",
-    });
+
+    const { data, error } = await supabase.from('form_submissions').insert([
+      {
+        first_name: formData.firstName,
+        last_name: formData.lastName,
+        email: formData.email,
+        phone: formData.phone,
+      }
+    ]);
+
+    if (error) {
+      toast({
+        title: "Erreur lors de l'inscription",
+        description: error.message,
+        variant: "destructive",
+      });
+    } else {
+      toast({
+        title: "Inscription Soumise !",
+        description: "Nous vous contacterons bientôt avec les détails de votre compte de trading.",
+      });
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+      });
+    }
   };
 
   const handleInputChange = (field: string, value: string) => {
@@ -28,7 +53,7 @@ const RegistrationForm = () => {
   };
 
   return (
-    <div className="lg:w-1/2 max-w-md w-full">
+    <div className="w-full max-w-md mx-auto px-4 sm:px-6 lg:px-8">
       <Card className="bg-slate-800/90 backdrop-blur-sm border-slate-700 p-6 shadow-2xl">
         <div className="text-center mb-6">
           <div className="w-12 h-12 bg-cyan-400/20 rounded-full flex items-center justify-center mx-auto mb-4">
