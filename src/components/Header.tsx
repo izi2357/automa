@@ -4,8 +4,8 @@ const Header = () => {
     <header className="text-center mb-8">
       <div className="flex items-center justify-center mb-4">
         <img
-          src="/a-logo-design-showcasing-trademaster-ia-_DPtoavjHQBSYZYuzx1t_ww_WJyGYArsRfyJwQstxd4cqA.jpeg"
-          alt="TradeMaster IA Logo"
+          src="/logo.png"
+          alt="Axion Capital Logo"
           className="w-32 h-32 object-contain rounded-md"
         />
       </div>
