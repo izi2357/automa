@@ -1,10 +1,10 @@
-# Welcome to your Axion Capital project
+# Welcome to your Automa project
 
 ## Project info
 
 **Use your preferred IDE**
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Axion Capital.
+If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Automa.
 
 The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
@@ -50,9 +50,9 @@ This project is built with:
 
 ## How can I deploy this project?
 
-Simply open the Axion Capital project and click on Share -> Publish.
+Simply open the Automa project and click on Share -> Publish.
 
-## Can I connect a custom domain to my Axion Capital project?
+## Can I connect a custom domain to my Automa project?
 
 Yes, you can!
 
