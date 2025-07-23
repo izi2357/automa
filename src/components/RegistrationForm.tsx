@@ -57,13 +57,13 @@ const RegistrationForm = () => {
       <Card className="bg-slate-800/90 backdrop-blur-sm border-slate-700 p-6 shadow-2xl">
         <div className="text-center mb-6">
           <div className="w-12 h-12 bg-cyan-400/20 rounded-full flex items-center justify-center mx-auto mb-4">
-            <DollarSign className="w-6 h-6 text-cyan-400" />
+            {/* Icon can remain or be replaced */}
           </div>
           <h3 className="text-white text-lg font-semibold mb-2">
-            Commencez à Gagner de l'Argent Immédiatement
+            Rejoignez Automa pour apprendre et grandir
           </h3>
           <p className="text-slate-300 text-sm">
-            Obtenez jusqu'à 50% de bonus d'inscription
+            Découvrez un environnement propice à votre développement personnel
           </p>
         </div>
 

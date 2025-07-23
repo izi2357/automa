@@ -5,6 +5,7 @@ import TrustBadges from "@/components/TrustBadges";
 import CallToAction from "@/components/CallToAction";
 import Testimonials from "@/components/Testimonials";
 import Features from "@/components/Features";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
@@ -24,6 +25,7 @@ const Index = () => {
         <CallToAction />
         <Testimonials />
         <Features />
+      <Footer />
       </div>
     </div>
   );
